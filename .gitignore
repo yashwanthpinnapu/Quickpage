@@ -1,0 +1,63 @@
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Docker
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# AWS
+.aws/
+credentials
+
+# Temporary files
+/tmp/
+*.tmp
+.cache/
+
+# Deployment
+lambda_deployment.zip
+
+# Sensitive data (just in case)
+*secret*
+*password*
+*private*
+*.pem
+*.key
+Quickpage/admin.html

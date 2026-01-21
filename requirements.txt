@@ -1,0 +1,11 @@
+pillow
+requests
+langchain
+langchain-aws
+langchain-community
+langchain-text-splitters
+langchainhub
+docarray
+boto3
+faiss-cpu
+python-jose[cryptography]

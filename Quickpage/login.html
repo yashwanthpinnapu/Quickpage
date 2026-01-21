@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickPage - Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-header">
+            <div class="logo-container">
+                <img src="Quickpage-long.svg" alt="QuickPage" class="logo" style="height: 40px; width: auto;">
+            </div>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-form" class="auth-form">
+            <h2>Sign In</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required autocomplete="current-password">
+                </div>
+                <div id="login-error" class="error-message"></div>
+                <button type="submit" class="btn-primary" id="login-btn">
+                    <span class="btn-text">Sign In</span>
+                    <span class="spinner" style="display: none;"></span>
+                </button>
+            </form>
+            <div class="auth-footer">
+                <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+            </div>
+        </div>
+
+        <!-- Signup Form -->
+        <div id="signup-form" class="auth-form" style="display: none;">
+            <h2>Create Account</h2>
+            <form id="signupForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="signup-firstname">First Name</label>
+                        <input type="text" id="signup-firstname" required autocomplete="given-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-lastname">Last Name</label>
+                        <input type="text" id="signup-lastname" required autocomplete="family-name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required autocomplete="new-password" minlength="8">
+                    <small>Must be at least 8 characters</small>
+                </div>
+                <div id="signup-error" class="error-message"></div>
+                <div id="signup-success" class="success-message"></div>
+                <button type="submit" class="btn-primary" id="signup-btn">
+                    <span class="btn-text">Create Account</span>
+                    <span class="spinner" style="display: none;"></span>
+                </button>
+            </form>
+            <div class="auth-footer">
+                <p>Already have an account? <a href="#" id="show-login">Sign in</a></p>
+            </div>
+        </div>
+
+        <!-- Verification Form -->
+        <div id="verification-form" class="auth-form" style="display: none;">
+            <h2>Verify Your Email</h2>
+            <p class="verification-info">We've sent a verification code to <strong id="verification-email"></strong></p>
+            <form id="verificationForm">
+                <div class="form-group">
+                    <label for="verification-code">Verification Code</label>
+                    <input type="text" id="verification-code" required maxlength="6" pattern="[0-9]{6}" placeholder="123456">
+                </div>
+                <div id="verification-error" class="error-message"></div>
+                <button type="submit" class="btn-primary" id="verify-btn">
+                    <span class="btn-text">Verify</span>
+                    <span class="spinner" style="display: none;"></span>
+                </button>
+            </form>
+            <div class="auth-footer">
+                <p><a href="#" id="resend-code">Resend verification code</a></p>
+                <p><a href="#" id="back-to-login">Back to sign in</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>
